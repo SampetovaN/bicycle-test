@@ -1,0 +1,16 @@
+.demonstration {
+  background-color: $red;
+}
+.demonstration__button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  @media (max-width: $width-desktop) {
+    svg {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

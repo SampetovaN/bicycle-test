@@ -1,0 +1,27 @@
+.button {
+  @include text-sets(20px,23px);
+  color: $white;
+  background-color: $red;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: 3px 3px #b90303;
+  }
+
+  &:active {
+    outline: none;
+    background-color: #b90303;
+    box-shadow: none;
+  }
+
+
+ &--order {
+   display: block;
+   transform: skew(-21deg);
+ }
+}

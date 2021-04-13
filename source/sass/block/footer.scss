@@ -1,0 +1,31 @@
+
+.footer__copyright {
+  color: $white;
+  @include text-sets(20px, 23px);
+  @media (max-width: $width-desktop) {
+    @include text-sets(14px, 16px);
+
+  }
+}
+
+.footer__link {
+  color: #5a636b;
+  @include text-sets(20px, 23px);
+  a {
+    color: $white;
+    text-decoration: underline;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $red;
+    }
+  }
+  @media (max-width: $width-desktop) {
+    @include text-sets(14px, 16px);
+  }
+}
+
+.footer {
+  background-color: #192632;
+}
+

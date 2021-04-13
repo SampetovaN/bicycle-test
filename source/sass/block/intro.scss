@@ -1,0 +1,29 @@
+.intro__title {
+  span {
+    color: $red;
+    font-style: italic;
+    @include text-sets(30px, 34px);
+    @media (max-width: $width-desktop) {
+      @include text-sets(20px, 23px);
+
+    }
+  }
+
+  h1 {
+    font-family: "Soviet Font", "Arial", sans-serif;
+    @include text-sets(100px, 150px);
+
+    @media (max-width: $width-desktop) {
+      @include text-sets(40px, 60px);
+
+    }
+  }
+
+}
+
+.intro__button {
+  span {
+    display: block;
+    transform: skew(20deg);
+  }
+}
