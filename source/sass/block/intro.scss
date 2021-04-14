@@ -1,29 +1,78 @@
-.intro__title {
-  span {
-    color: $red;
-    font-style: italic;
-    @include text-sets(30px, 34px);
-    @media (max-width: $width-desktop) {
-      @include text-sets(20px, 23px);
+.intro {
+  background: linear-gradient(98deg, $background-color 68%,$red 35%);
+  margin: 0 auto;
+  position: relative;
+}
 
-    }
+.intro__wrapper {
+  max-width: 1500px;
+  background-image: url("../img/bike-desktop.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 49%;
+  padding: 14% 4% 13%;
+  margin: 0 auto;
+
+  @media (min-width: $width-template) {
+    background-size: initial;
   }
+}
+
+@media (max-width: $width-desktop) and (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+  .intro__wrapper {
+    background-image: url("../img/bike-desktop@2x.png");
+  }
+}
+
+.intro {
 
   h1 {
+    margin: 0;
+    position: relative;
+    padding-top: 20px;
     font-family: "Soviet Font", "Arial", sans-serif;
     @include text-sets(100px, 150px);
+    width: 62%;
+    color: #192632;
+    margin-bottom: 65px;
+    //-webkit-text-stroke-width: 1px;
+   // -webkit-text-stroke-color: black;
 
+    @media (max-width: 1150px) {
+      font-size: 81px;
+    }
     @media (max-width: $width-desktop) {
       @include text-sets(40px, 60px);
+    }
 
+
+    &::before {
+      content: "Быстрый. Дерзкий";
+      font-family: "TT Commons Trial", "Arial", sans-serif;
+      color: $red;
+      font-style: italic;
+      @include text-sets(30px, 34px);
+      position: absolute;
+      top: -5px;
+      @media (max-width: $width-desktop) {
+        @include text-sets(20px, 23px);
+
+      }
     }
   }
 
 }
 
 .intro__button {
+  padding: 13px;
+  display: block;
+  transform: skew(-19deg);
+  width: 22%;
+  margin-left: 8px;
+  max-width: 165px;
   span {
     display: block;
-    transform: skew(20deg);
+    transform: skew(19deg);
   }
 }
+

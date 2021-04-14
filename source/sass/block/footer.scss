@@ -1,10 +1,22 @@
 
 .footer__copyright {
   color: $white;
+  position: relative;
+  padding-left: 24px;
+
   @include text-sets(20px, 23px);
   @media (max-width: $width-desktop) {
     @include text-sets(14px, 16px);
 
+  }
+  &::before {
+    content: "";
+    width: 14px;
+    height: 15px;
+    position: absolute;
+    background-image: url("../img/copyright.svg");
+    background-repeat: no-repeat;
+    left: 0;
   }
 }
 
@@ -27,5 +39,11 @@
 
 .footer {
   background-color: #192632;
+}
+
+.footer__wrapper {
+  display: flex;
+  padding: 31px 55px;
+  justify-content: space-between;
 }
 

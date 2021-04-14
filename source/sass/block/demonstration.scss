@@ -1,11 +1,72 @@
 .demonstration {
   background-color: $red;
+  position: relative;
+  padding-top: 8%;
+  margin: 0 auto;
+  padding-bottom: 10%;
 }
+
+.demonstration__wrapper {
+  &--video {
+    display: flex;
+    video {
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
+  }
+  &--product {
+    display: none;
+    img {
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+    }
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
 .demonstration__button {
   cursor: pointer;
   background-color: transparent;
   border: none;
   outline: none;
+  width: 136px;
+  height: 136px;
+  left: 67.3%;
+  position: absolute;
+  z-index: 5;
+  bottom: -12%;
+
+  background-repeat: no-repeat;
+  &--video {
+    background-image: url("../img/play-button.svg");
+    &:hover,
+    &:focus {
+      background-image: url("../img/play-red.svg");
+    }
+
+    &:active {
+      background-image: url("../img/play-brown.svg");
+    }
+  }
+
+  &--product {
+    background-image: url("../img/buy-button.svg");
+    &:hover,
+    &:focus {
+      background-image: url("../img/buy-red.svg");
+    }
+
+    &:active {
+      background-image: url("../img/buy-brown.svg");
+    }
+  }
 
   @media (max-width: $width-desktop) {
     svg {
@@ -14,3 +75,4 @@
     }
   }
 }
+
